@@ -1,4 +1,5 @@
 local table = table.clone(table);
+local Dump = loadstring(game:HttpGet('https://raw.githubusercontent.com/strawbberrys/LuaScripts/main/TableDumper.lua'))()
 
 function table.merge(...)
     local NewTable = {};
@@ -9,6 +10,10 @@ function table.merge(...)
     end
 
     return NewTable
+end
+
+function table.dump(table)
+    return Dump(table)
 end
 
 return table
