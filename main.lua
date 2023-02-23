@@ -11,7 +11,7 @@ function table.merge(...)
     return NewTable
 end
 
-function table.dump(table)
+function table.dump(tablearg)
     -- Created by Pyseph#0001
 
 local SpecialCharacters = {['\a'] = '\\a', ['\b'] = '\\b', ['\f'] = '\\f', ['\n'] = '\\n', ['\r'] = '\\r', ['\t'] = '\\t', ['\v'] = '\\v', ['\0'] = '\\0'}
@@ -118,7 +118,7 @@ local function TableToString(Table, IgnoredTables, DepthData, Path)
 	return IsEmpty and Result .. '}' or string.sub(Result,  1, -2) .. '\n' .. TrailingTab .. '}'
 end
     
-    return TableToString
+    return TableToString(tablearg)
 end
 
 return table
